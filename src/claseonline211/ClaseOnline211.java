@@ -8,10 +8,44 @@ package claseonline211;
  *
  * @author Silver
  */
+class Persona{
+    String nombre, numero;
+    void darNombre(){
+        System.out.println("Saludos, Mi nombre es: " + this.nombre);
+    }
+}
+class Estudiante extends Persona{
+    String codigoBiblioteca,codigoCarnet;
+
+    Estudiante() {
+    }
+
+    Estudiante(String Nombre, String Numero, String CBib, String CCar) {
+        this.nombre = Nombre;
+        this.numero = Numero;
+        this.codigoBiblioteca = CBib;
+        this.codigoCarnet = CCar;
+    }
+    
+    void darCarnet(){
+        System.out.println("Saludos, Mi nombre es: " + this.nombre + " y mi numero de carnet es: " +this.codigoCarnet);
+    }
+}
+
 public class ClaseOnline211 {
     
     public static void main(String[] args) {
         int a,b,c; // a,b,c : integer
+        Persona edson = new Persona();
+        //Estudiante jose = new Estudiante();
+        Estudiante jose = new Estudiante("Jose Daniel Mora Alu","04245048789","123456","20005");
+        Estudiante Pedro = new Estudiante("Pedro Ruiz","04265048789","112356","20105");
+        /*jose.nombre = "Jose Daniel Mora Alu";
+        jose.numero = "04245048789";
+        jose.codigoBiblioteca = "123456";
+        jose.codigoCarnet = "20005";*/
+        jose.darCarnet();
+        Pedro.darCarnet();
         a=1;//a:=1
         b=2;//a:=1
         c=1;//a:=1
